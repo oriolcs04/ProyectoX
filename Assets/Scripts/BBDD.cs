@@ -8,10 +8,10 @@ using System.Data.Common;
 
 public class BBDD : MonoBehaviour
 {
-    List<AlimentoSO> alimentos = new();
-    List<PlanetaSO> planetas = new();
-    List<ElementoSO> elementos = new();
-    List<AlienSO> aliens = new();
+    public List<AlimentoSO> alimentos = new();
+    public List<PlanetaSO> planetas = new();
+    public List<ElementoSO> elementos = new();
+    public List<AlienSO> aliens = new();
 
     // Start is called before the first frame update
     void Start()
@@ -76,15 +76,15 @@ public class BBDD : MonoBehaviour
             aliens.Add(new AlienSO(dataReader.GetInt32(0), dataReader.GetInt32(1), dataReader.GetInt32(2), dataReader.GetInt32(3), dataReader.GetString(4), dataReader.GetString(5)));
         }
 
-        foreach (var item in aliens)
-        {
-            Debug.Log(item.alienId); 
-            Debug.Log(item.alienName);
-            Debug.Log(item.alienDescription);
-            Debug.Log(item.alienIdAlimento);
-            Debug.Log(item.alienIdPlaneta);
-            Debug.Log(item.alienIdElemento);
-        }
+        //foreach (var item in aliens)
+        //{
+        //    Debug.Log(item.alienId); 
+        //    Debug.Log(item.alienName);
+        //    Debug.Log(item.alienDescription);
+        //    Debug.Log(item.alienIdAlimento);
+        //    Debug.Log(item.alienIdPlaneta);
+        //    Debug.Log(item.alienIdElemento);
+        //}
     }
 
     private void SelectAlimentos(IDbConnection dbConnection)
@@ -98,12 +98,12 @@ public class BBDD : MonoBehaviour
             alimentos.Add(new AlimentoSO(dataReader.GetInt32(0), dataReader.GetString(1), dataReader.GetString(2)));
         }
 
-        foreach (var item in alimentos)
-        {
-            Debug.Log(item.alimentoId);
-            Debug.Log(item.alimentoName);
-            Debug.Log(item.alimentoDescription);
-        }
+        //foreach (var item in alimentos)
+        //{
+        //    Debug.Log(item.alimentoId);
+        //    Debug.Log(item.alimentoName);
+        //    Debug.Log(item.alimentoDescription);
+        //}
     }
 
     private void SelectPlanetas(IDbConnection dbConnection)
@@ -117,12 +117,12 @@ public class BBDD : MonoBehaviour
             planetas.Add(new PlanetaSO(dataReader.GetInt32(0), dataReader.GetString(1), dataReader.GetString(2)));
         }
 
-        foreach (var item in planetas)
-        {
-            Debug.Log(item.planetaId);
-            Debug.Log(item.planetaName);
-            Debug.Log(item.planetaDescription);
-        }
+        //foreach (var item in planetas)
+        //{
+        //    Debug.Log(item.planetaId);
+        //    Debug.Log(item.planetaName);
+        //    Debug.Log(item.planetaDescription);
+        //}
     }
 
     private void SelectElementos(IDbConnection dbConnection)
@@ -136,11 +136,11 @@ public class BBDD : MonoBehaviour
             elementos.Add(new ElementoSO(dataReader.GetInt32(0), dataReader.GetString(1), dataReader.GetString(2)));
         }
 
-        foreach (var item in elementos)
-        {
-            Debug.Log(item.elementoId);
-            Debug.Log(item.elementoName);
-            Debug.Log(item.elementoDescription);
-        }
+        //foreach (var item in elementos)
+        //{
+        //    Debug.Log(item.elementoId);
+        //    Debug.Log(item.elementoName);
+        //    Debug.Log(item.elementoDescription);
+        //}
     }
 }
