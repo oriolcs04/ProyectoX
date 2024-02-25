@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b6257e2dd39369f488f1122d4973ca49
+=======
+guid: aeb2b679c09514647a7ef6ef952a9a3e
+>>>>>>> Ui_Pokedex
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
