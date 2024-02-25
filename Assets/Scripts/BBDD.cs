@@ -8,6 +8,11 @@ using System.Data.Common;
 
 public class BBDD : MonoBehaviour
 {
+    List<AlimentoSO> alimentos = new();
+    List<PlanetaSO> planetas = new();
+    List<ElementoSO> elementos = new();
+    List<AlienSO> aliens = new();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,23 +21,23 @@ public class BBDD : MonoBehaviour
         
     }
 
-    private IDbConnection CreateAndOpenDatabase() // 3
+    private IDbConnection CreateAndOpenDatabase()
     {
         // Open a connection to the database.
-        string dbUri = "URI=file:MyDatabase.sqlite"; // 4
-        IDbConnection dbConnection = new SqliteConnection(dbUri); // 5
-        dbConnection.Open(); // 6
+        string dbUri = "URI=file:MyDatabase.sqlite";
+        IDbConnection dbConnection = new SqliteConnection(dbUri);
+        dbConnection.Open();
         
         // Create a table for the hit count in the database if it does not exist yet.
-        IDbCommand dbCommandCreateTable = dbConnection.CreateCommand(); // 6
+        IDbCommand dbCommandCreateTable = dbConnection.CreateCommand();
         dbCommandCreateTable.CommandText = "CREATE TABLE IF NOT EXISTS ALIMENTS (id_alim INT NOT NULL, nom_alim VARCHAR(40) NOT NULL, desc_alim VARCHAR(500) NOT NULL, PRIMARY KEY (id_alim));" +
                                             "CREATE TABLE IF NOT EXISTS PLANETA (id_planeta INT NOT NULL, nom_planeta VARCHAR(40) NOT NULL, desc_planeta VARCHAR(500) NOT NULL, PRIMARY KEY (id_planeta));" +
                                             "CREATE TABLE IF NOT EXISTS Element (id_elem INT NOT NULL, nom_elem VARCHAR(40) NOT NULL, desc_elem VARCHAR(500) NOT NULL, PRIMARY KEY (id_elem));" +
                                             "CREATE TABLE IF NOT EXISTS ALIEN (id_alien INT NOT NULL, id_alim INT NOT NULL, id_planeta INT NOT NULL, id_elem INT NOT NULL, nom_alien VARCHAR(40) NOT NULL, desc_alien VARCHAR(500) NOT NULL, PRIMARY KEY (id_alien, id_alim, id_planeta, id_elem), FOREIGN KEY (id_alim) REFERENCES Aliments (id_alim), FOREIGN KEY (id_planeta) REFERENCES planeta (id_planeta), FOREIGN KEY (id_elem) REFERENCES Element (id_elem) );"; // 7
-        dbCommandCreateTable.ExecuteReader(); // 8
+        dbCommandCreateTable.ExecuteReader();
 
         // Insert hits into the table.
-        IDbCommand dbCommandInsertValue = dbConnection.CreateCommand(); // 9
+        IDbCommand dbCommandInsertValue = dbConnection.CreateCommand();
         dbCommandInsertValue.CommandText = "Insert or replace into Element(id_elem, nom_elem, desc_elem) Values ( 1, 'Metal Antiguo', 'El Elemento Metál Antiguo es un metal legendario, con una apariencia resplandeciente y una historia enraizada en las épocas ancestrales el cual guarda un gran poder.');" +
                                             "Insert or replace into Element(id_elem, nom_elem, desc_elem) Values ( 2, 'Hierro', 'En cualquier momento puede convertir su cuerpo en hierro, siendo como un escudo ante el enemigo, tambien se puede disolver convirtiendose en un elemento liquido. Tiene el poder magentico muy fuerte en el que puede atraer estrellas entre otras cosas.');" +
                                             "Insert or replace into Element(id_elem, nom_elem, desc_elem) Values ( 3, 'Magnetite', 'Este elemento tiene propidades magneticas extraodinarias que concede al portador el poder de manipular los campos magneticos.');" +
@@ -49,24 +54,93 @@ public class BBDD : MonoBehaviour
                                             "Insert or replace into ALIEN(id_alien, id_alim, id_planeta, id_elem, nom_alien, desc_alien)  Values ( 2, 2, 2, 2, 'Equus', 'Alien que proviene de las aguas de la luna.');" +
                                             "Insert or replace into ALIEN(id_alien, id_alim, id_planeta, id_elem, nom_alien, desc_alien)  Values ( 3, 3, 3, 3, 'Scavenger', 'Es un alienigena con una apariencia desconocida que siempre va con una tunica y una mascara que ocultan su cara. Este se dedica a acumular chatarra y crean sus hogares con ella. Son lo suficiente inteligentes para constuir armas y herramientas.');" +
                                             "Insert or replace into ALIEN(id_alien, id_alim, id_planeta, id_elem, nom_alien, desc_alien)  Values ( 4, 4, 4, 4, 'Mekkari', 'Una raza alienígena similar a las Formicidae de la Tierra, posee características humanoides pero carece de conciencia individualista; en su lugar, todos los individuos comparten una conciencia colectiva, formando una colonia que piensa y actúa como un único ente.')"; //; 10
-        dbCommandInsertValue.ExecuteNonQuery(); // 11
+        dbCommandInsertValue.ExecuteNonQuery();
 
-        IDbCommand dbCommandReadValues = dbConnection.CreateCommand(); // 15
-        dbCommandReadValues.CommandText = "SELECT * FROM ALIEN"; // 16
-        IDataReader dataReader = dbCommandReadValues.ExecuteReader(); // 17
-
-        List<AlienSO> nombres = new();
-
-        while (dataReader.Read()) // 18
-        {
-            nombres.Add(new AlienSO(dataReader.GetString(4)));
-        }
-
-        foreach (var item in nombres)
-        {
-            Debug.Log(item.alienName);
-        }
+        SelectAlimentos(dbConnection);
+        SelectPlanetas(dbConnection);
+        SelectElementos(dbConnection);
+        SelectAliens(dbConnection);
 
         return dbConnection;
+    }
+
+    private void SelectAliens(IDbConnection dbConnection)
+    {
+        IDbCommand dbCommandReadValues = dbConnection.CreateCommand();
+        dbCommandReadValues.CommandText = "SELECT * FROM ALIEN";
+        IDataReader dataReader = dbCommandReadValues.ExecuteReader();
+
+
+        while (dataReader.Read())
+        {
+            aliens.Add(new AlienSO(dataReader.GetInt32(0), dataReader.GetInt32(1), dataReader.GetInt32(2), dataReader.GetInt32(3), dataReader.GetString(4), dataReader.GetString(5)));
+        }
+
+        foreach (var item in aliens)
+        {
+            Debug.Log(item.alienId); 
+            Debug.Log(item.alienName);
+            Debug.Log(item.alienDescription);
+            Debug.Log(item.alienIdAlimento);
+            Debug.Log(item.alienIdPlaneta);
+            Debug.Log(item.alienIdElemento);
+        }
+    }
+
+    private void SelectAlimentos(IDbConnection dbConnection)
+    {
+        IDbCommand dbCommandReadValues = dbConnection.CreateCommand();
+        dbCommandReadValues.CommandText = "SELECT * FROM Aliments";
+        IDataReader dataReader = dbCommandReadValues.ExecuteReader();
+
+        while (dataReader.Read())
+        {
+            alimentos.Add(new AlimentoSO(dataReader.GetInt32(0), dataReader.GetString(1), dataReader.GetString(2)));
+        }
+
+        foreach (var item in alimentos)
+        {
+            Debug.Log(item.alimentoId);
+            Debug.Log(item.alimentoName);
+            Debug.Log(item.alimentoDescription);
+        }
+    }
+
+    private void SelectPlanetas(IDbConnection dbConnection)
+    {
+        IDbCommand dbCommandReadValues = dbConnection.CreateCommand(); 
+        dbCommandReadValues.CommandText = "SELECT * FROM PLANETA"; 
+        IDataReader dataReader = dbCommandReadValues.ExecuteReader(); 
+
+        while (dataReader.Read())
+        {
+            planetas.Add(new PlanetaSO(dataReader.GetInt32(0), dataReader.GetString(1), dataReader.GetString(2)));
+        }
+
+        foreach (var item in planetas)
+        {
+            Debug.Log(item.planetaId);
+            Debug.Log(item.planetaName);
+            Debug.Log(item.planetaDescription);
+        }
+    }
+
+    private void SelectElementos(IDbConnection dbConnection)
+    {
+        IDbCommand dbCommandReadValues = dbConnection.CreateCommand();
+        dbCommandReadValues.CommandText = "SELECT * FROM Element";
+        IDataReader dataReader = dbCommandReadValues.ExecuteReader();
+
+        while (dataReader.Read())
+        {
+            elementos.Add(new ElementoSO(dataReader.GetInt32(0), dataReader.GetString(1), dataReader.GetString(2)));
+        }
+
+        foreach (var item in elementos)
+        {
+            Debug.Log(item.elementoId);
+            Debug.Log(item.elementoName);
+            Debug.Log(item.elementoDescription);
+        }
     }
 }

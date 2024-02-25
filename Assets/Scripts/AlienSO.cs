@@ -9,15 +9,15 @@ public class AlienSO : ScriptableObject
     public int alienIdAlimento;
     public int alienIdPlaneta;
     public int alienIdElemento;
-    public AlienSO(string name)
+    public AlienSO(int idAlie, int idAlim, int idPlanet, int idElem, string name, string desc)
     {
 
-        alienId = default;
+        alienId = idAlie;
         alienName = name;
-        alienDescription = default;
-        alienIdAlimento = default;
-        alienIdPlaneta = default;
-        alienIdElemento = default;
+        alienDescription = desc;
+        alienIdAlimento = idAlim;
+        alienIdPlaneta = idPlanet;
+        alienIdElemento = idElem;
 
     }
 }
