@@ -21,7 +21,7 @@ public class BBDD : MonoBehaviour
         
     }
 
-    private IDbConnection CreateAndOpenDatabase()
+    private void CreateAndOpenDatabase()
     {
         // Open a connection to the database.
         string dbUri = "URI=file:MyDatabase.sqlite";
@@ -61,7 +61,7 @@ public class BBDD : MonoBehaviour
         SelectElementos(dbConnection);
         SelectAliens(dbConnection);
 
-        return dbConnection;
+        dbConnection.Close();
     }
 
     private void SelectAliens(IDbConnection dbConnection)
