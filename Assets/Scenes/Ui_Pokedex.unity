@@ -201,7 +201,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bbddValues
       value: 
-      objectReference: {fileID: 2002088403}
+      objectReference: {fileID: 0}
     - target: {fileID: 8264092355559592470, guid: a46f704b585ef3740b30ad36c1e89117,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -400,7 +400,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bbddValues
       value: 
-      objectReference: {fileID: 2002088403}
+      objectReference: {fileID: 0}
     - target: {fileID: 8264092355559592470, guid: 8cc15c2c54fa28e4993b5b3312973662,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -666,15 +666,35 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 26.4
       objectReference: {fileID: 0}
+    - target: {fileID: 689246983136723735, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 761069524867953226, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 779506142346503647, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 864437613399849710, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1143205292816846121, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904628136953575950, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1904628136953575950, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
@@ -716,6 +736,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2798927407303230604, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2923707694628262731, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
       propertyPath: m_Layer
@@ -725,6 +750,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3089059159798017438, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210048272947505379, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3577328566476996216, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
@@ -781,6 +816,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4422647061959705980, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4435267880477087045, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
       propertyPath: m_Layer
@@ -800,7 +840,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bbddValues
       value: 
-      objectReference: {fileID: 2002088403}
+      objectReference: {fileID: 2002088402}
     - target: {fileID: 4439324797964931062, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
       propertyPath: descriptionValue
@@ -876,6 +916,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7469023865843781559, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7849574861052214052, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -905,6 +950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849725005469670980, guid: 9abcd92195dba1d49809537356804443,
+        type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7931857096886719336, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
@@ -1378,16 +1428,16 @@ Camera:
     y: 0
     width: 2.81
     height: 1.26
-  near clip plane: 21.39
-  far clip plane: 28.31
-  field of view: 60
-  orthographic: 1
+  near clip plane: 20.6
+  far clip plane: 30.41
+  field of view: 9.05
+  orthographic: 0
   orthographic size: 2.04
   m_Depth: 90.5
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 8400000, guid: ec050f07fe7bd5b478fdc955fc436ef3, type: 2}
   m_TargetDisplay: 1
   m_TargetEye: 3
@@ -1898,7 +1948,6 @@ GameObject:
   - component: {fileID: 2002088400}
   - component: {fileID: 2002088399}
   - component: {fileID: 2002088402}
-  - component: {fileID: 2002088403}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1981,18 +2030,6 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2002088402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002088398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2002088403
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

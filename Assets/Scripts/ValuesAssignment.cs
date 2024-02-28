@@ -15,6 +15,10 @@ public class Asigne : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        idValue.text = "ERROR";
+        descriptionValue.text = "" + bbddValues.aliens.Count;
+        descriptionValue.text = bbddValues.aliens[0].alienDescription;
+
         switch (this.name)
         {
             case "EscenaMecha":
@@ -40,6 +44,9 @@ public class Asigne : MonoBehaviour
                 idValue.text = "Nº." + bbddValues.aliens[1].alienId.ToString();
                 nameValue.text = bbddValues.aliens[1].alienName;
                 descriptionValue.text = bbddValues.aliens[1].alienDescription;
+                break;
+            default:
+                idValue.text = "ERROR";
                 break;
         }
     }

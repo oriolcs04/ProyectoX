@@ -4,9 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Ui_Pokedex.unity
+    guid: a368b16cab083fd4babe4f965c9b5770
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
+      guid: 3d919b7fa48d00d49a4e0eee384f0e17, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3f1851917a31c5c4a800805866fdaec8,
       type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: 662b1f448e07f024ba370b425f6bc872, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: cee3e406cd582fc4c81cd2b9597c1218, type: 2}
