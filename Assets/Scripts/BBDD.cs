@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mono.Data.Sqlite;
 using System.Data;
-
 using System.Data.Common;
 
 public class BBDD : MonoBehaviour

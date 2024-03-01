@@ -15,9 +15,7 @@ public class Asigne : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        idValue.text = "ERROR";
-        descriptionValue.text = "" + bbddValues.aliens.Count;
-        descriptionValue.text = bbddValues.aliens[0].alienDescription;
+        
 
         switch (this.name)
         {
