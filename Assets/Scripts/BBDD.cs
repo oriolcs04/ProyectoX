@@ -23,7 +23,7 @@ public class BBDD : MonoBehaviour
     private void CreateAndOpenDatabase()
     {
         // Open a connection to the database.
-        string dbUri = "URI=file:MyDatabase.sqlite";
+        string dbUri = $"URI=file:{Application.persistentDataPath}/MyDatabase.sqlite";
         IDbConnection dbConnection = new SqliteConnection(dbUri);
         dbConnection.Open();
         
