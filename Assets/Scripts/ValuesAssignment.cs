@@ -15,8 +15,7 @@ public class Asigne : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-
+        bbddValues.CreateAndOpenDatabase();
         switch (this.name)
         {
             case "EscenaMecha":

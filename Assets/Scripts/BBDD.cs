@@ -13,20 +13,20 @@ public class BBDD : MonoBehaviour
     public List<AlienSO> aliens = new();
 
     // Start is called before the first frame update
-    void Start()
-    {
-        CreateAndOpenDatabase();
+    //public void Start()
+    //{
+    //    CreateAndOpenDatabase();
 
-        
-    }
 
-    private void CreateAndOpenDatabase()
+    //}
+
+    public void CreateAndOpenDatabase()
     {
         // Open a connection to the database.
-        string dbUri = "URI=file:MyDatabase.sqlite";
+        string dbUri = $"URI=file:{Application.persistentDataPath}/MyDatabase.sqlite";
         IDbConnection dbConnection = new SqliteConnection(dbUri);
         dbConnection.Open();
-        
+
         // Create a table for the hit count in the database if it does not exist yet.
         IDbCommand dbCommandCreateTable = dbConnection.CreateCommand();
         dbCommandCreateTable.CommandText = "CREATE TABLE IF NOT EXISTS ALIMENTS (id_alim INT NOT NULL, nom_alim VARCHAR(40) NOT NULL, desc_alim VARCHAR(500) NOT NULL, PRIMARY KEY (id_alim));" +
@@ -107,9 +107,9 @@ public class BBDD : MonoBehaviour
 
     private void SelectPlanetas(IDbConnection dbConnection)
     {
-        IDbCommand dbCommandReadValues = dbConnection.CreateCommand(); 
-        dbCommandReadValues.CommandText = "SELECT * FROM PLANETA"; 
-        IDataReader dataReader = dbCommandReadValues.ExecuteReader(); 
+        IDbCommand dbCommandReadValues = dbConnection.CreateCommand();
+        dbCommandReadValues.CommandText = "SELECT * FROM PLANETA";
+        IDataReader dataReader = dbCommandReadValues.ExecuteReader();
 
         while (dataReader.Read())
         {
