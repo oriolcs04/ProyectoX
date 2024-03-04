@@ -1,20 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BuscadorController : MonoBehaviour
 {
+    private void Start()
+    {
+        InstanceScriptArray();
+    }
+
+    //public static event Action<GameObject> ActiveThisIsle;
+    //public static event Action<GameObject> ActivedIsle;
     // Pag buscador
     public GameObject IslePage;
     public GameObject AlimentPage;
     public GameObject TypePage;
-    public GameObject NamePage;
+    public GameObject AlienNamePage;
 
     // Alien Buttons 
     public GameObject Tekni;
     public GameObject Equus;
     public GameObject Scavenger;
     public GameObject Mekkari;
+    public GameObject[] AlienNameButtons;
 
     // Alien scenes prefabs
     public GameObject TekniScene;
@@ -27,12 +36,13 @@ public class BuscadorController : MonoBehaviour
     // MainPage controller
     public void Nombre()
     {
-        NamePage.SetActive(true);
+        AlienNamePage.SetActive(true);
         Tekni.SetActive(true);
         Equus.SetActive(true);
         Scavenger.SetActive(true);
         Mekkari.SetActive(true);
     }
+
     public void Alimento()
     {
         AlimentPage.SetActive(true);
@@ -51,40 +61,37 @@ public class BuscadorController : MonoBehaviour
         IslePage.SetActive(false);
         AlimentPage.SetActive(false);
         TypePage.SetActive(false);
-        NamePage.SetActive(false);
+        AlienNamePage.SetActive(false);
 
-        Tekni.SetActive(false);
-        Equus.SetActive(false);
-        Scavenger.SetActive(false);
-        Mekkari.SetActive(false);
+        foreach (var button in AlienNameButtons)
+        {
+            button.SetActive(false);
+        }
     }
 
     // subpages controller
-    public void Id1()
+    public void AlienPageActived(int alienID)
     {
-        NamePage.SetActive(true);
-        Tekni.SetActive(true);
+        CheckActualScene().SetActive(false);
+        Scenes[alienID].SetActive(true);
     }
-    public void Id2()
+
+    public void ShowAlienMatchingFilter(int alienID)
     {
-        NamePage.SetActive(true);
-        Equus.SetActive(true);
+        AlienNamePage.SetActive(true);
+        AlienNameButtons[alienID].SetActive(true);
     }
-    public void Id3()
+
+    public void InstanceScriptArray()
     {
-        NamePage.SetActive(true);
-        Scavenger.SetActive(true);
-    }
-    public void Id4()
-    {
-        NamePage.SetActive(true);
-        Mekkari.SetActive(true);
+        Scenes = new GameObject[4] { TekniScene, EquusScene, ScavengerScene, MekkariScene };
+        AlienNameButtons = new GameObject[4] { Tekni, Equus, Scavenger, Mekkari };
+        Scenes[0].SetActive(true);
     }
 
     // alien scene change
     public GameObject CheckActualScene()
     {
-        Scenes = new GameObject[4] { TekniScene, EquusScene, ScavengerScene, MekkariScene }; 
 
         foreach (GameObject scene in Scenes)
         {
@@ -93,27 +100,9 @@ public class BuscadorController : MonoBehaviour
                 ActualScene = scene;
             }
         }
-
         return ActualScene;
     }
-    public void TekniSceneChange()
-    {
-        TekniScene.SetActive(true);
-        ActualScene.SetActive(false);
-    }
-    public void EquusSceneChange()
-    {
-        EquusScene.SetActive(true);
-        ActualScene.SetActive(false);
-    }
-    public void ScavengerSceneChange()
-    {
-        ScavengerScene.SetActive(true);
-        ActualScene.SetActive(false);
-    }
-    public void MekkariSceneChange()
-    {
-        MekkariScene.SetActive(true);
-        ActualScene.SetActive(false);
-    }
+
+    
+    
 }

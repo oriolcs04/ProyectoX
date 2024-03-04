@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00077867036, g: 0.0041233166, b: 0.019989327, a: 1}
+  m_IndirectSpecularColor: {r: 0.0007787092, g: 0.0041236565, b: 0.019990839, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -255,7 +255,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 74698734}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1752452941}
+        m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
+        m_MethodName: AlienPageActived
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &74698734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,8 +1097,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id1
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1511,7 +1523,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 592222237}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1752452941}
+        m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
+        m_MethodName: AlienPageActived
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &592222237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1964,12 +1988,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id4
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2188,12 +2212,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id4
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2484,8 +2508,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id1
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2617,12 +2641,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id3
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2750,8 +2774,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id1
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3296,12 +3320,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id4
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3365,7 +3389,7 @@ PrefabInstance:
     - target: {fileID: 290040508909579226, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 636931805553314608, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
@@ -3761,18 +3785,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 846528809209134231, guid: 9abcd92195dba1d49809537356804443,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 9116927011025037941, guid: 9abcd92195dba1d49809537356804443,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-    - targetCorrespondingSourceObject: {fileID: 5042211452977899465, guid: 9abcd92195dba1d49809537356804443,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 3577328566476996216, guid: 9abcd92195dba1d49809537356804443,
         type: 3}
       insertIndex: -1
@@ -4473,12 +4485,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id2
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4603,7 +4615,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1490340551}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1752452941}
+        m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
+        m_MethodName: AlienPageActived
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1490340551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5312,7 +5336,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1656963137}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1752452941}
+        m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
+        m_MethodName: AlienPageActived
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1656963137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5988,11 +6024,12 @@ MonoBehaviour:
   IslePage: {fileID: 1429136157}
   AlimentPage: {fileID: 1733707328}
   TypePage: {fileID: 2083022617}
-  NamePage: {fileID: 612425727}
+  AlienNamePage: {fileID: 612425727}
   Tekni: {fileID: 592222234}
   Equus: {fileID: 74698731}
   Scavenger: {fileID: 1656963134}
   Mekkari: {fileID: 1490340548}
+  AlienNameButtons: []
   TekniScene: {fileID: 1140539597}
   EquusScene: {fileID: 615837337}
   ScavengerScene: {fileID: 73210419}
@@ -6084,12 +6121,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id2
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6217,12 +6254,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id3
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6447,12 +6484,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id2
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6580,12 +6617,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1752452941}
         m_TargetAssemblyTypeName: BuscadorController, Assembly-CSharp
-        m_MethodName: Id3
-        m_Mode: 1
+        m_MethodName: ShowAlienMatchingFilter
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
