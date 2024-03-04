@@ -249,6 +249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497b2e8e14cbd7943938406c44e98739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alimentos: []
+  planetas: []
+  elementos: []
+  aliens: []
 --- !u!65 &770967516
 BoxCollider:
   m_ObjectHideFlags: 0
