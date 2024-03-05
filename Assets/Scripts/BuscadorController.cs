@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class BuscadorController : MonoBehaviour
 {
-    
-
-    //public static event Action<GameObject> ActiveThisIsle;
-    //public static event Action<GameObject> ActivedIsle;
     // Pag buscador
     public GameObject islePage;
     public GameObject alimentPage;
@@ -30,8 +26,9 @@ public class BuscadorController : MonoBehaviour
     public GameObject actualScene;
     public GameObject[] scenes;
 
-    //Extra Buttons
+    //Extra Objects
     public GameObject turnOn;
+    public GameObject panel;
 
 
     private void Start()
@@ -88,10 +85,12 @@ public class BuscadorController : MonoBehaviour
         alienNameButtons[alienID].SetActive(true);
     }
 
-    public void InstanceScriptArray()
+    //Funcion De TurnOn 
+    public void TurnOnDex()
     {
-        scenes = new GameObject[4] { tekniScene, equusScene, scavengerScene, mekkariScene };
-        alienNameButtons = new GameObject[4] { tekni, equus, scavenger, mekkari };
+        turnOn.SetActive(false);
+        scenes[0].SetActive(true);
+        panel.SetActive(true);
     }
 
     // alien scene change
@@ -108,9 +107,9 @@ public class BuscadorController : MonoBehaviour
         return actualScene;
     }
 
-    public void TurnOnDex()
+    public void InstanceScriptArray()
     {
-        turnOn.SetActive(false);
-        scenes[0].SetActive(true);
+        scenes = new GameObject[4] { tekniScene, equusScene, scavengerScene, mekkariScene };
+        alienNameButtons = new GameObject[4] { tekni, equus, scavenger, mekkari };
     }
 }
