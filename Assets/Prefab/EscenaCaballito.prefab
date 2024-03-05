@@ -196,9 +196,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4305927338828705988}
   - {fileID: 4484478007148622248}
   - {fileID: 7272777619279357911}
-  - {fileID: 4305927338828705988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7423729267184123171
@@ -1880,7 +1880,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.929
+      value: 13.929001
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
@@ -2158,17 +2158,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7476c09c97fb1d54dbef4d02b1d6e850,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -51.905
+      value: -51.925
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7476c09c97fb1d54dbef4d02b1d6e850,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.995
+      value: 4.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7476c09c97fb1d54dbef4d02b1d6e850,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.183
+      value: 14.182999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7476c09c97fb1d54dbef4d02b1d6e850,
         type: 3}
@@ -2211,13 +2211,14 @@ PrefabInstance:
       value: PERSONAJE_NeyCargua
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8821623529969584324, guid: 7476c09c97fb1d54dbef4d02b1d6e850, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7476c09c97fb1d54dbef4d02b1d6e850,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6774596503313853048}
+      addedObject: {fileID: 5925884993292775775}
   m_SourcePrefab: {fileID: 100100000, guid: 7476c09c97fb1d54dbef4d02b1d6e850, type: 3}
 --- !u!4 &7272777619279357911 stripped
 Transform:
@@ -2231,7 +2232,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7162027201770274876}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6774596503313853048
+--- !u!114 &5925884993292775775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
