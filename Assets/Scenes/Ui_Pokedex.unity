@@ -6384,6 +6384,7 @@ MonoBehaviour:
   scenes: []
   turnOn: {fileID: 1588143812}
   panel: {fileID: 1425362792}
+  mainCam: {fileID: 2002088400}
 --- !u!1 &1782550610
 GameObject:
   m_ObjectHideFlags: 0

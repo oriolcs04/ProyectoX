@@ -30,6 +30,8 @@ public class BuscadorController : MonoBehaviour
     public GameObject turnOn;
     public GameObject panel;
 
+    public Camera mainCam;
+    
 
     private void Start()
     {
@@ -91,6 +93,8 @@ public class BuscadorController : MonoBehaviour
         turnOn.SetActive(false);
         scenes[0].SetActive(true);
         panel.SetActive(true);
+        mainCam.transform.position = new Vector3(-16.04f, 7.9f, -2.1f);
+        mainCam.GetComponent<Camera>().orthographicSize = 2.45f;
     }
 
     // alien scene change
