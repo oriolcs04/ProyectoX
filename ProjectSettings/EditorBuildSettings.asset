@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Planetario.unity
     guid: acef16e4a5516ed43b5d98c275007e1b
-  - enabled: 1
-    path: Assets/Scenes/Settings.unity
-    guid: 74192d90342d36040ba8416e1783f037
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: 3d919b7fa48d00d49a4e0eee384f0e17, type: 2}

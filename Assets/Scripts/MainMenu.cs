@@ -9,20 +9,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    
-    public void ToTheMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
 
     public void ToThePlanetarium()
     {
         SceneManager.LoadScene(2);
-    }
-    
-    public void OpenSettings()
-    {
-        SceneManager.LoadScene(3);
     }
 
     public void Quit()
