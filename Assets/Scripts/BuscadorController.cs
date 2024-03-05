@@ -5,65 +5,70 @@ using UnityEngine;
 
 public class BuscadorController : MonoBehaviour
 {
+    // Pag buscador
+    public GameObject islePage;
+    public GameObject alimentPage;
+    public GameObject typePage;
+    public GameObject alienNamePage;
+
+    // Alien Buttons 
+    public GameObject tekni;
+    public GameObject equus;
+    public GameObject scavenger;
+    public GameObject mekkari;
+    public GameObject[] alienNameButtons;
+
+    // Alien scenes prefabs
+    public GameObject tekniScene;
+    public GameObject equusScene;
+    public GameObject scavengerScene;
+    public GameObject mekkariScene;
+    public GameObject actualScene;
+    public GameObject[] scenes;
+
+    //Extra Objects
+    public GameObject turnOn;
+    public GameObject panel;
+
+    public Camera mainCam;
+    
+
     private void Start()
     {
         InstanceScriptArray();
     }
 
-    //public static event Action<GameObject> ActiveThisIsle;
-    //public static event Action<GameObject> ActivedIsle;
-    // Pag buscador
-    public GameObject IslePage;
-    public GameObject AlimentPage;
-    public GameObject TypePage;
-    public GameObject AlienNamePage;
-
-    // Alien Buttons 
-    public GameObject Tekni;
-    public GameObject Equus;
-    public GameObject Scavenger;
-    public GameObject Mekkari;
-    public GameObject[] AlienNameButtons;
-
-    // Alien scenes prefabs
-    public GameObject TekniScene;
-    public GameObject EquusScene;
-    public GameObject ScavengerScene;
-    public GameObject MekkariScene;
-    public GameObject ActualScene;
-    public GameObject[] Scenes;
-
     // MainPage controller
     public void Nombre()
     {
-        AlienNamePage.SetActive(true);
-        Tekni.SetActive(true);
-        Equus.SetActive(true);
-        Scavenger.SetActive(true);
-        Mekkari.SetActive(true);
+        alienNamePage.SetActive(true);
+        tekni.SetActive(true);
+        equus.SetActive(true);
+        scavenger.SetActive(true);
+        mekkari.SetActive(true);
     }
 
     public void Alimento()
     {
-        AlimentPage.SetActive(true);
+        alimentPage.SetActive(true);
     }
     public void Tipo()
     {
-        TypePage.SetActive(true);
+        typePage.SetActive(true);
     }
     public void Isla()
     {
-        IslePage.SetActive(true);
+        islePage.SetActive(true);
     }
 
     public void ExitBuscador()
     {
-        IslePage.SetActive(false);
-        AlimentPage.SetActive(false);
-        TypePage.SetActive(false);
-        AlienNamePage.SetActive(false);
+        islePage.SetActive(false);
+        alimentPage.SetActive(false);
+        typePage.SetActive(false);
+        alienNamePage.SetActive(false);
 
-        foreach (var button in AlienNameButtons)
+        foreach (var button in alienNameButtons)
         {
             button.SetActive(false);
         }
@@ -73,36 +78,42 @@ public class BuscadorController : MonoBehaviour
     public void AlienPageActived(int alienID)
     {
         CheckActualScene().SetActive(false);
-        Scenes[alienID].SetActive(true);
+        scenes[alienID].SetActive(true);
     }
 
     public void ShowAlienMatchingFilter(int alienID)
     {
-        AlienNamePage.SetActive(true);
-        AlienNameButtons[alienID].SetActive(true);
+        alienNamePage.SetActive(true);
+        alienNameButtons[alienID].SetActive(true);
     }
 
-    public void InstanceScriptArray()
+    //Funcion De TurnOn 
+    public void TurnOnDex()
     {
-        Scenes = new GameObject[4] { TekniScene, EquusScene, ScavengerScene, MekkariScene };
-        AlienNameButtons = new GameObject[4] { Tekni, Equus, Scavenger, Mekkari };
-        Scenes[0].SetActive(true);
+        turnOn.SetActive(false);
+        scenes[0].SetActive(true);
+        panel.SetActive(true);
+        mainCam.transform.position = new Vector3(-16.04f, 7.9f, -2.1f);
+        mainCam.GetComponent<Camera>().orthographicSize = 2.45f;
     }
 
     // alien scene change
     public GameObject CheckActualScene()
     {
 
-        foreach (GameObject scene in Scenes)
+        foreach (GameObject scene in scenes)
         {
             if (scene.activeInHierarchy == true)
             {
-                ActualScene = scene;
+                actualScene = scene;
             }
         }
-        return ActualScene;
+        return actualScene;
     }
 
-    
-    
+    public void InstanceScriptArray()
+    {
+        scenes = new GameObject[4] { tekniScene, equusScene, scavengerScene, mekkariScene };
+        alienNameButtons = new GameObject[4] { tekni, equus, scavenger, mekkari };
+    }
 }
