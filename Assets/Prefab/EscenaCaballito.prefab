@@ -1875,12 +1875,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.308
+      value: 4.4104233
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.929001
+      value: 13.906152
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
@@ -1895,22 +1895,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.991649
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.12896699
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 14.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
@@ -1936,7 +1936,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 93db7a598e6d71a4f950fdc850c9aab2, type: 2}
+      objectReference: {fileID: 2100000, guid: 7a3b171a8e63d7c47b4ee753b9a2a36d, type: 2}
     - target: {fileID: -4683669308469848369, guid: b0a1598c058a5e5499ce245afbcf733d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
